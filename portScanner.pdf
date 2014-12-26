@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+	    <title>Central Authentication Service | Indiana University</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        
+		
+        <link type="text/css" rel="stylesheet" href="/cas/css/general.css;jsessionid=51E608E6F3FB13608417FFE63B4BA0F4.Cas_1Engine" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	      <link href="https://www.iu.edu/favicon.ico" rel="icon"/>
+          <link href="https://www.iu.edu/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+              <div class="header-inner">
+				        <h1 id="company-name"><a href="http://www.iu.edu">Indiana University</a></h1>
+              </div>
+            </div>
+            <div id="content" class="fl-screenNavigator-scroll-container">
+              
+              <div id="main-content">
+
+<div class="bg-red"><!-- intentionally left blank--></div>
+
+
+  <div class="box fl-panel" id="login">
+    <div class="login-inner">
+      <h1 id="app-name">Central Authentication Service</h1>
+      <hr>
+			<form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=51E608E6F3FB13608417FFE63B4BA0F4.Cas_1Engine?cassvc=CMS&amp;casurl=https://resources.oncourse.iu.edu/sakai-login-tool/container" method="post">
+                  
+                    <div class="row fl-controls-left">
+                        <label for="username" class="fl-label"><span class="accesskey">U</span>sername:</label>
+						
+
+						
+						
+						<input id="username" name="username" class="required" tabindex="1" accesskey="u" type="text" value="" size="25" autocomplete="false"/>
+						
+                    </div>
+                    <div class="row fl-controls-left">
+                        <label for="password" class="fl-label"><span class="accesskey">P</span>assphrase:</label>
+						
+						
+						<input id="password" name="password" class="required" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    </div>
+                    <!--<div class="row">
+                        <input id="rememberMe" name="rememberMe" value="true" tabindex="3" accesskey="e" type="checkbox" />
+                        <label for="rememberMe">R<span class="accesskey">e</span>member Me</label>
+                    </div>-->
+                    <div class="row btn-row">
+						<input type="hidden" name="lt" value="LT-225066-gkMaj1o3eEGh3Z4IPKaIC5hKbvlagYcasprd01" />
+						<input type="hidden" name="execution" value="e1s1" />
+						<input type="hidden" name="_eventId" value="submit" />
+
+                        <input class="btn-submit" name="submit" accesskey="l" value="Login" tabindex="4" type="submit" />
+
+                    </div>
+                    <div class="row" id="help-text">Trouble signing in? <a href="https://kb.iu.edu/d/alpu.html">We can help</a>.</div>
+                    <div class="row" id="text">
+                      <p>To access protected services, you will need to establish your IU authentication.</p>
+                      <p>For security reasons, you will need to close your web browser when you finish using services that require authentication.</p>
+                    </div>
+            </form>
+          </div>
+          </div>
+
+
+</div>
+</div>
+                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+                	<div id="copyright">
+                        <div id="blockiu"><a href="http://www.iu.edu" title="Indiana University"></a></div>
+                        <div id="statement"><a href="http://www.iu.edu/comments/copyright.shtml" title="Copyright">Copyright</a> &copy;
+                          <script type="text/javascript">
+                          var current_date = new Date ( );
+                          document.write ( " " + current_date.getFullYear() );
+                          </script>
+                          <noscript>2011</noscript>
+
+                          The Trustees of <a href="http://www.iu.edu" title="Indiana University">Indiana University</a> | <a href="http://www.iu.edu/comments/complaint.shtml" title="Copyright Complaints">Copyright Complaints</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js;jsessionid=51E608E6F3FB13608417FFE63B4BA0F4.Cas_1Engine"></script>
+    </body>
+</html>
+
+
