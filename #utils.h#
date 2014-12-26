@@ -1,0 +1,77 @@
+
+#ifndef __UTILS_h__
+#define __UTILS_h__
+
+#include <stdio.h> 
+#include <string.h>
+#include <stdlib.h>
+#include <sys/socket.h>
+#include <errno.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <netinet/tcp.h>
+#include <netinet/ip.h>
+#include <netinet/udp.h>
+#include <unistd.h>
+#include <stdarg.h>
+#include <iostream>
+
+
+
+struct pseudo_header // for checksum calculation
+{
+  unsigned int source_address;
+  unsigned int dest_address;
+  unsigned char placeholder;
+  unsigned char protocol;
+  unsigned short tcp_length;
+  struct tcphdr tcp;
+};
+
+struct pseudo_header_udp
+{
+  unsigned int source_address;
+  unsigned int dest_address;
+  unsigned char placeholder;
+  unsigned char protocol;
+  unsigned short udp_length;
+};
+
+
+
+// convert char* to in_addr_t
+in_addr_t resolve_to_ip(char *addr);
+
+char* hostname_to_ip(char *hostname);
+
+
+// setup local ip
+int get_local_ip(char *);
+
+
+// calc the checksums
+unsigned short csum(unsigned short *ptr,int nbytes);
+
+
+bool printMSG(std::string msg);
+// take the same args as printf
+// print to standard output when VERBOSE is true
+bool printMSG(const char *fmt, ...);
+
+// calc checksum
+void calcTCPCheckSums(struct tcphdr *tcph, struct in_addr source_ip, struct in_addr dest_ip);
+
+
+// construct packets
+void constructSYNPacket(struct iphdr*, struct tcphdr*, struct in_addr, struct in_addr, int, int);
+void constructNULLPacket(struct iphdr*, struct tcphdr*, struct in_addr, struct in_addr, int, int);
+void constructFINPacket(struct iphdr*, struct tcphdr*, struct in_addr, struct in_addr, int, int);
+void constructXmasPacket(struct iphdr*, struct tcphdr*, struct in_addr, struct in_addr, int, int);
+void constructACKPacket(struct iphdr*, struct tcphdr*, struct in_addr, struct in_addr, int, int);
+void constructUDPPacket(struct iphdr*, struct udphdr*, struct in_addr, struct in_addr, int, int);
+
+void verifyStdServices(std::string ip_addr);
+std::string getServiceName(int port);
+
+#endif
+
